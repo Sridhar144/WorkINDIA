@@ -1,0 +1,33 @@
+POST http://127.0.0.1:8000/api/signup 
+Content-Type: application/json
+
+{ "username": "adam", "password": "Pass1234!", "email": "adam@mail.com" }
+
+###
+
+POST http://127.0.0.1:8000/api/login 
+Content-Type: application/json
+
+{ "username": "Sridhar3", "password": "Sridhar1234!" }
+
+###
+
+GET http://127.0.0.1:8000/api/test_token 
+Content-Type: application/json
+Authorization: token 12a1fdd784101d9a422ee7643ef46c257c37b855
+
+POST http://127.0.0.1:8000/api/shorts/create 
+Content-Type: application/json
+Authorization: token 12a1fdd784101d9a422ee7643ef46c257c37b855
+
+{
+    "category": "news",
+    "title": "All The Best for placements",
+    "author": "Pranav",
+    "publish_date": "2023-01-01T16:00:00Z",
+    "content": "Lorem ipsum ...",
+    "actual_content_link": "http://instagram.com/placements",
+    "image": "",
+    "upvote": 0,
+    "downvote": 0
+}
